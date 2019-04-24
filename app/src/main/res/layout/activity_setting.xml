@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SettingActivity">
+    tools:context=".SettingActivity"
+    >
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -16,10 +18,55 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+
+
+
 
     </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:text="Change Background color"
+        />
+
+    <Button
+        android:id="@+id/whiteButton"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:text="White"
+        android:onClick="whitecolor"/>
+    <Button
+        android:id="@+id/lightPurple"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="80sp"
+        android:text="Light Purple"
+        android:onClick="lightPurple"/>
+    <Button
+        android:id="@+id/lightBlueButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="80sp"
+        android:text="Light Blue"
+        android:onClick="lightblue"/>
+
+    <Button
+        android:id="@+id/lightSeaGreenButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="80sp"
+        android:text="Light Sea Green"
+        android:onClick="lightSeaGreen"/>
+
 
 
 </LinearLayout>

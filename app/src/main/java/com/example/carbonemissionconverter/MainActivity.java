@@ -1,8 +1,8 @@
 package com.example.carbonemissionconverter;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
@@ -11,10 +11,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.LinearLayout;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    public static int Global_Color = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (Global_Color == 0)
+        {
+            LinearLayout ll_MainPage = findViewById(R.id.main_menu_layout);
+            ll_MainPage.setBackgroundColor(Color.WHITE);
+        }
+        if (Global_Color == 1)
+        {
+            LinearLayout ll_MainPage = findViewById(R.id.main_menu_layout);
+            ll_MainPage.setBackgroundColor( getResources().getColor(R.color.lightPurple));
+        }
+        if (Global_Color == 2)
+        {
+            LinearLayout ll_MainPage = findViewById(R.id.main_menu_layout);
+            ll_MainPage.setBackgroundColor( getResources().getColor(R.color.lightBlue));
+        }
+        if (Global_Color == 3)
+        {
+            LinearLayout ll_MainPage = findViewById(R.id.main_menu_layout);
+            ll_MainPage.setBackgroundColor( getResources().getColor(R.color.lightSeaGreen));
+        }
 
     }
 
@@ -93,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         co2.setText("");
 
     }
+
 
 
 
